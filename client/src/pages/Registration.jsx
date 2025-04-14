@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-//import { registerUser } from '../services/user'
+import { registerUser } from '../services/user'
 
 function Register() {
   const [info, setInfo] = useState({
@@ -28,7 +28,7 @@ function Register() {
       toast.warn('Password does not match')
     } else {
       const { fullName, email, password, phone } = info
-      const result = await registrationUser(
+      const result = await registerUser(
         fullName,
         email,
         password,

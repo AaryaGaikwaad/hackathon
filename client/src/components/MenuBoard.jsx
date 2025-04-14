@@ -81,9 +81,9 @@ function Navbar() {
               <Link
                 className='nav-link'
                 aria-current='page'
-                to='/container/AddCategory'
+                to='/container/Categories'
               >
-                Add Category
+                 Categories
               </Link>
             </li>
             <li className='nav-item'>
@@ -104,7 +104,7 @@ function Navbar() {
               </button>
             </li>
           </ul>
-          {/*<span className='navbar-text'>Welcome {user.fullName}</span>*/}
+          <span className='navbar-text'>Welcome {user.fullName}</span>
         </div>
       </div>
     </nav>

@@ -12,7 +12,9 @@ function Login() {
     email :'',
     password:'',
  })
-
+  
+  const navigate = useNavigate()
+  
  const onLogin = async () => {
     if (info.email.length ==0) {
         toast.warn('Please enter email')
@@ -31,6 +33,8 @@ function Login() {
 
             //set the context
             setUser({fullName, email})
+            //redirect to AllBlogs
+            navigate('/container/AllBlogs')
 
         }
     }

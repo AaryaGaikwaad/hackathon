@@ -9,7 +9,7 @@ export async function registerUser(
 ) {
   try {
     // create url
-    const url = `${config.serverUrl}/user/registration`
+    const url = `${config.serverUrl}/user/register`
 
     // create the body
     const body = {
