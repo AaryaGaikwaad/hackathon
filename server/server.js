@@ -14,6 +14,7 @@ app.use(express.json())
 
 app.use('/user',userRouter)
 app.use('/categories',categoriesRouter)
+app.use('/blogs',blogRouter)
 
 app.listen(4000, 'localhost', () => {
     console.log('server started at port 4000')

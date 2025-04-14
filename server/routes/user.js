@@ -31,8 +31,7 @@ router.post('/login', (req, res) => {
         const token = jwt.sign(payload, config.secret)
         const body = {
           token: token,
-          firstName: data[0].firstName,
-          lastName: data[0].lastName,
+          full_name: data[0].full_name,
         }
         res.send(result.createSuccessResult(body))
       } else res.send(result.createErrorResult('Invalid email or password'))
