@@ -28,7 +28,7 @@ function Register() {
       toast.warn('Password does not match')
     } else {
       const { fullName, email, password, phone } = info
-      const result = await registerUser(
+      const result = await registrationUser(
         fullName,
         email,
         password,

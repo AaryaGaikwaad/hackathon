@@ -4,13 +4,13 @@ import Login from './pages/Login'
 import Registration from './pages/Registration'
 import { ToastContainer } from 'react-toastify'
 import AddBlog from './pages/AddBlog'
-import AddCategory from './pages/AddCategory'
+import Categories from './pages/Categories'
 import BlogDetails from './pages/BlogDetails'
 import MyBlogs from './pages/MyBlogs'
 import SearchBlog from './pages/SearchBlog'
 import UpdateBlog from './pages/UpdateBlog'
 import Container from './pages/Container'
-import MenuBoard from './components/MenuBoard'
+import AllBlogs from './pages/AllBlogs'
 
 
 
@@ -33,15 +33,14 @@ function App() {
             path='registration'
             element={<Registration />}
           />
-           <Route
-            path='navbar'
-            element={<MenuBoard />}
-          />
-          
         <Route
             path='/container'
             element={user ? <Container /> : <Login />}
           >
+             <Route
+              path='AllBlogs'
+              element={<AllBlogs />}
+            />
             <Route
               path='MyBlogs'
               element={<MyBlogs />}
@@ -61,8 +60,8 @@ function App() {
               element={<SearchBlog />}
             />
             <Route
-              path='AddCategory'
-              element={<AddCategory />}
+              path='Categories'
+              element={<Categories />}
             />
             <Route
               path='BlogDetails'

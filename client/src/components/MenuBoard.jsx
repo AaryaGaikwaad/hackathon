@@ -31,9 +31,9 @@ function Navbar() {
       <div className='container-fluid'>
         <Link
           className='navbar-brand'
-          to='/container/MyBlogs'
+          to='/container/AllBlogs'
         >
-          My Blogs
+          All Blogs
         </Link>
 
         <div
@@ -41,6 +41,15 @@ function Navbar() {
           id='navbarText'
         >
           <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+          <li className='nav-item'>
+              <Link
+                className='nav-link'
+                aria-current='page'
+                to='/container/MyBlogs'
+              >
+              My Blogs
+              </Link>
+            </li>
             <li className='nav-item'>
               <Link
                 className='nav-link'

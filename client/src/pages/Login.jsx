@@ -2,7 +2,7 @@
 import React, {useContext, useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-//import { loginUser } from '../services/user'
+import { loginUser } from '../services/user'
 import { AuthContext } from '../App'
 
 function Login() {
@@ -20,7 +20,7 @@ function Login() {
         toast.warn('Please enter password')
     } else {
         const { email, password } = info
-        //const result = await loginUser(email, password)
+        const result = await loginUser(email, password)
         if (result['status'] == 'success') {
             toast.success('Welcome to Blogs World')
 
